@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stickhero.PlayingController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg1.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="tower1" arcHeight="5.0" arcWidth="5.0" height="350.0" stroke="#a43939" strokeType="INSIDE" width="80.0" y="370.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6431372761726379" green="0.2235294133424759" blue="0.2235294133424759" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.21052631735801697" green="0.06822612136602402" blue="0.06822612136602402" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="endPosition" fill="TRANSPARENT" height="1.0" opacity="0" width="1.0" />
+      <ImageView fx:id="monkeyImageView" fitHeight="50.0" fitWidth="50.0" x="20.0" y="325.0">
+         <image>
+            <Image url="@monke1.png" />
+         </image>
+         <rotationAxis>
+            <Point3D x="1.0" />
+         </rotationAxis>
+      </ImageView>
+      <Rectangle fx:id="stick" arcHeight="5.0" arcWidth="5.0" fill="#724932" height="5.0" layoutX="83.0" layoutY="338.0" stroke="#c38867" strokeType="INSIDE" visible="false" width="5.0" x="-5.0" y="8.0" />
+      <Rectangle fx:id="tower2" arcHeight="5.0" arcWidth="5.0" height="350.0" opacity="0.0" stroke="#a43939" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6431372761726379" green="0.2235294133424759" blue="0.2235294133424759" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.21052631735801697" green="0.06822612136602402" blue="0.06822612136602402" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fx:id="bananaImageView" fitHeight="45.0" fitWidth="45.0" x="205.0" y="410.0">
+         <image>
+            <Image url="@Banana1.png" />
+         </image>
+      </ImageView>
+      <StackPane layoutX="540.0" layoutY="34.0" prefHeight="118.0" prefWidth="202.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9db9d3" height="117.0" opacity="0.61" stroke="WHITE" strokeType="INSIDE" width="201.0" />
+            <Text fx:id="score" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1210.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Banana1.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="banana_score" fill="WHITE" layoutX="1060.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="143.25">
+         <font>
+            <Font name="Baskerville Old Face" size="37.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

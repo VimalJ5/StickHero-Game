@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stickhero.EndgameController">
+    <children>
+        <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@bg1.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000076" height="720.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+        <AnchorPane layoutX="437.0" layoutY="221.0">
+            <children>
+                <Rectangle arcHeight="60.0" arcWidth="60.0" fill="WHITE" height="202.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="400.0" />
+                <Text layoutX="41.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="35.0" />
+                    </font>
+                </Text>
+                <Text layoutX="41.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BEST">
+                    <font>
+                        <Font name="Baskerville Old Face" size="35.0" />
+                    </font>
+                </Text>
+                <Text fx:id="score" layoutX="313.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                    <font>
+                        <Font name="Baskerville Old Face" size="35.0" />
+                    </font>
+                </Text>
+                <Text fx:id="best_score" layoutX="313.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                    <font>
+                        <Font name="Baskerville Old Face" size="35.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <StackPane layoutX="323.0" layoutY="455.0" onMouseClicked="#menuSceneShift" prefHeight="82.0" prefWidth="196.0">
+            <!-- Background for the button -->
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3498db" height="60.0" width="160.0" />
+
+            <!-- Image on top of the button (placeholder) -->
+            <ImageView fitHeight="64.0" fitWidth="164.0">
+                <image>
+                    <Image url="@button_bg2.jpg" />
+                </image>
+            </ImageView>
+
+            <!-- Text on top of the button (if needed) -->
+            <Text text="HOME">
+                <font>
+                    <Font name="Baskerville Old Face" size="36.0" />
+                </font>
+            </Text>
+        </StackPane>
+        <StackPane layoutX="739.0" layoutY="455.0" onMouseClicked="#gameSceneShift" prefHeight="82.0" prefWidth="196.0">
+            <children>
+                <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3498db" height="60.0" width="160.0" />
+                <ImageView fitHeight="64.0" fitWidth="164.0">
+                    <image>
+                        <Image url="@button_bg2.jpg" />
+                    </image>
+                </ImageView>
+                <Text text="RESTART">
+                    <font>
+                        <Font name="Baskerville Old Face" size="36.0" />
+                    </font>
+                </Text>
+            </children>
+        </StackPane>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1216.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Banana1.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="banana_score" fill="WHITE" layoutX="1066.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="143.25">
+            <font>
+                <Font name="Baskerville Old Face" size="37.0" />
+            </font>
+        </Text>
+        <Rectangle fx:id="tower1" arcHeight="5.0" arcWidth="5.0" blendMode="SRC_ATOP" height="350.0" stroke="#a43939" strokeType="INSIDE" width="80.0" x="610.0" y="470.0">
+            <fill>
+                <LinearGradient cycleMethod="REFLECT" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.6431372761726379" green="0.2235294133424759" blue="0.2235294133424759" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.21052631735801697" green="0.06822612136602402" blue="0.06822612136602402" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Rectangle fx:id="tower2" arcHeight="5.0" arcWidth="5.0" blendMode="SRC_ATOP" height="350.0" stroke="#a43939" strokeType="INSIDE" width="80.0" y="470.0">
+            <fill>
+                <LinearGradient cycleMethod="REFLECT" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.6431372761726379" green="0.2235294133424759" blue="0.2235294133424759" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.21052631735801697" green="0.06822612136602402" blue="0.06822612136602402" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <StackPane layoutX="539.0" layoutY="455.0" onMouseClicked="#Revive" prefHeight="82.0" prefWidth="196.0">
+            <children>
+                <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#3498db" height="60.0" width="160.0" />
+                <ImageView fitHeight="64.0" fitWidth="164.0">
+                    <image>
+                        <Image url="@button_bg2.jpg" />
+                    </image>
+                </ImageView>
+                <Text text="REVIVE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="36.0" />
+                    </font>
+                </Text>
+            </children>
+        </StackPane>
+        <Text fill="#e5ff1e" layoutX="574.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For 5       ?" wrappingWidth="176.0">
+            <font>
+                <Font name="Baskerville Old Face" size="30.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="652.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Banana1.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="monkeyImageView" fitHeight="50.0" fitWidth="50.0" layoutX="-2.0" layoutY="-306.0" pickOnBounds="true" preserveRatio="true" visible="false" x="629.0" y="422.0">
+            <image>
+                <Image url="@monke1.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="517.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME OVER" textAlignment="CENTER" wrappingWidth="246.5498046875">
+            <font>
+                <Font name="Baskerville Old Face" size="76.0" />
+            </font>
+        </Text>
+      <Text fx:id="warning" fill="#e5ff1e" layoutX="474.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOT ENOUGH BANANAS !!!" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Baskerville Old Face" size="27.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
